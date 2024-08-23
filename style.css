@@ -40,7 +40,7 @@ h1, h2 {
 .centered-container {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* O mantiene el centrado vertical */
+    justify-content: center; 
     align-items: center;
     gap: 10px;
     padding: 20px;
@@ -62,52 +62,52 @@ h1, h2 {
     border: none;
 }
 
-/* Estilo para el botón de "Seleccionar" */
+
 .btn-outline-primary {
     margin-top: 10px;
 }
 
-/* Oculta el formulario por defecto */
+
 .hidden-form {
     display: none;
 }
 
-/* Muestra el formulario cuando la tarjeta está activa */
+
 .card.active .hidden-form {
     display: block;
 }
 
-/* Estilo general para el formulario */
+
 form {
     margin-top: 20px;
 }
 
-/* Estilo para el campo del formulario */
+
 .form-group {
     margin-bottom: 15px;
 }
 
-/* Estilo para las etiquetas del formulario */
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-/* Estilo para los selectores del formulario */
+
 .form-control {
     width: 100%;
     padding: 8px;
     font-size: 16px;
 }
 
-/* Estilo para las opciones con precio */
+
 .form-control option {
     font-size: 16px;
 }
 
 
-/* Estilo para el icono del carrito en el header */
+
 .carrito-icono {
     position: fixed;
     top: 10px;
@@ -122,7 +122,7 @@ form {
 }
 
 
-/* Carrito Grande */
+
 .carrito {
     position: fixed;
     top: 0;
@@ -132,7 +132,7 @@ form {
     background-color: #fff;
     box-shadow: -2px 0 5px rgba(0,0,0,0.1);
     padding: 20px;
-    display: none; /* Oculto por defecto */
+    display: none; 
     z-index: 1000;
 }
 
