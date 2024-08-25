@@ -37,7 +37,38 @@ h1, h2 {
     color: #333;
     align-items: center;
 }
+
+.carrito-icono {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.carrito-icono img {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    
+}
+
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #c0fff4;
+}
+
+
 /*
+
+
 .encabezado {
     display: flex;
     justify-content: center;
@@ -119,63 +150,4 @@ form {
 }
 
 */
-
-.carrito-icono {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
-}
-
-.carrito-icono img {
-    vertical-align: middle;
-    width: 30px;
-    height: 30px;
-    
-}
-
-
-
-.carrito {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 300px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-    padding: 20px;
-    display: none; 
-    z-index: 1000;
-}
-
-.carrito h2 {
-    margin-top: 0;
-}
-
-.carrito-contenedor-cards {
-    max-height: 60vh;
-    overflow-y: auto;
-    margin-bottom: 20px;
-}
-
-.total {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.terminar-compra {
-    width: 100%;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-.terminar-compra:hover {
-    background-color: #218838;
-}
 
