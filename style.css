@@ -9,23 +9,35 @@ body {
 
 .navbar {
     background-color: #ffc0cb;
-    padding: 10px 20px; /* Ajusta el padding para el navbar */
+    padding: 10px 20px; 
 }
 
 .navbar-brand {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
 
+.navbar-brand:focus,
+.navbar-brand:active,
+.navbar-brand:visited {
+    color: inherit; 
+    outline: none;
+}
+
+
 .navbar-brand img {
+    margin-right: 8px;
     width: 30px;
     height: 30px;
 }
 
 h1, h2 {
     color: #333;
+    align-items: center;
 }
-
+/*
 .encabezado {
     display: flex;
     justify-content: center;
@@ -106,7 +118,7 @@ form {
     font-size: 16px;
 }
 
-
+*/
 
 .carrito-icono {
     position: fixed;
@@ -116,9 +128,10 @@ form {
 }
 
 .carrito-icono img {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    
 }
 
 
