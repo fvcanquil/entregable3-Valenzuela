@@ -1,9 +1,19 @@
 const URL = 'https://fake-coffee-api.vercel.app/api?limit=2';
 const main = document.getElementById("main");
 const contenedorCarrito = document.getElementById('carrito'); 
-
+const shoppingCartIcon = document.getElementById('shoppingCartIcon');
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+contenedorCarrito.style.display = 'none';
+
+shoppingCartIcon.addEventListener('click', () => {
+    if (contenedorCarrito.style.display === 'none') {
+        contenedorCarrito.style.display = 'block';
+    } else {
+        contenedorCarrito.style.display = 'none';
+    }
+});
 
 actualizarCarrito();
 
@@ -50,8 +60,14 @@ obtenerProductos();
 function agregarAlCarrito(id, name, price, image_url) {
     console.log("se agrego algo");
 
-    const producto = { id, name, price, image_url };
-    carrito.push(producto);
+    const producto = carrito.find(item => item.id === id);
+
+    if (producto){
+        producto.quantity +=1;
+    } else {
+        carrito.push({id,name,price,image_url, quantity:1});
+    }
+   
     actualizarCarrito();
 
     localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -86,7 +102,7 @@ function actualizarCarrito() {
             <img src="${item.image_url}" class="card-img-top" alt="${item.name}">
             <div class="card-body">
                 <h5 class="card-title">${item.name}</h5>
-                <p class="card-text">$${item.price}</p>
+                <p class="card-text">$${item.price} x ${item.quantity}</p>
                 <button class="btn btn-danger" onclick="confirmarEliminar('${item.id}')">Eliminar</button>
             </div>
         `;
@@ -94,7 +110,7 @@ function actualizarCarrito() {
     });
 
   
-    const precioTotal = carrito.reduce((total, item) => total + Number(item.price), 0);
+    const precioTotal = carrito.reduce((total, item) => total + (item.price * item.quantity), 0);
     const totalElemento = document.createElement('div');
     totalElemento.className = 'total';
     totalElemento.innerHTML = `Total: $${precioTotal.toFixed(2)}`;
@@ -148,8 +164,16 @@ function confirmarEliminar(productId) {
 
 function eliminarDelCarrito(productId) {
     console.log ('Se elimino algo')
-    carrito = carrito.filter(item => item.id !== productId);
-    actualizarCarrito();
 
-localStorage.setItem('carrito', JSON.stringify(carrito));
+    const producto = carrito.find(item => item.id === productId);
+
+    if (producto) {
+        if (producto.quantity > 1) {
+            producto.quantity -= 1;
+        } else {
+            carrito = carrito.filter(item => item.id !== productId);
+        }
+    }
+    actualizarCarrito();
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 }
