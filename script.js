@@ -127,11 +127,16 @@ function confirmarEliminar(productId) {
     }).then((result) => {
         if (result.isConfirmed) {
             eliminarDelCarrito(productId);
-            Swal.fire(
-                '¡Eliminado!',
-                'El producto ha sido eliminado del carrito.',
-                'success'
-            );
+            Swal.fire({
+                title: '¡Eliminado!',
+                text: 'El producto ha sido eliminado del carrito.',
+                icon: 'success',
+                imageUrl: './img/Cat-eliminar.avif', 
+                imageWidth: 100,
+                imageHeight: 100,
+                imageAlt: 'Producto eliminado',
+                confirmButtonText: 'OK'
+            });
         }
     });
 }
