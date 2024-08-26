@@ -13,8 +13,8 @@ const mostrarProductos = (arrayCoffee) => {
         <div class='card'> 
             <h3>${e.name}</h3>
             <img src="${e.image_url}"/> 
-            <p>${e.description}</p>
-            <p>${e.flavor_profile}</p>
+            <h4>${e.flavor_profile}</h4>
+            <p>${e.description}</p>      
             <p>$${e.price}</p>
             <button class="btnSeleccionar" onclick="agregarAlCarrito('${e._id}', '${e.name}', ${e.price}, '${e.image_url}')">Seleccionar</button>
         </div>
@@ -48,6 +48,7 @@ obtenerProductos();
 
 function agregarAlCarrito(id, name, price, image_url) {
     console.log("se agrego algo");
+
     const producto = { id, name, price, image_url };
     carrito.push(producto);
     actualizarCarrito();
