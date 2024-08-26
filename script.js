@@ -3,8 +3,9 @@ const main = document.getElementById("main");
 const contenedorCarrito = document.getElementById('carrito'); 
 
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
+actualizarCarrito();
 
 const mostrarProductos = (arrayCoffee) => {
     main.innerHTML = "";
@@ -53,6 +54,7 @@ function agregarAlCarrito(id, name, price, image_url) {
     carrito.push(producto);
     actualizarCarrito();
 
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 
     Swal.fire({
         title: '¡Añadido!',
@@ -108,6 +110,7 @@ function actualizarCarrito() {
             confirmButtonText: 'OK'
         });
         carrito = [];
+        localStorage.removeItem('carrito');
         actualizarCarrito();
     });
 
@@ -147,4 +150,6 @@ function eliminarDelCarrito(productId) {
     console.log ('Se elimino algo')
     carrito = carrito.filter(item => item.id !== productId);
     actualizarCarrito();
+
+localStorage.setItem('carrito', JSON.stringify(carrito));
 }
