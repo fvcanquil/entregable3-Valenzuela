@@ -9,7 +9,7 @@ body {
 
 .navbar {
     background-color: #ffc0cb;
-    padding: 10px 20px; 
+    padding: 10px 30px; 
 }
 
 .navbar-brand {
@@ -17,6 +17,8 @@ body {
     align-items: center;
     text-decoration: none;
     color: inherit;
+    font-size: 1.5rem;
+    padding: 20px;
 }
 
 .navbar-brand:focus,
@@ -28,108 +30,213 @@ body {
 
 
 .navbar-brand img {
-    margin-right: 8px;
-    width: 30px;
-    height: 30px;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
 }
 
 h1, h2 {
     color: #333;
     align-items: center;
 }
+
 .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr; 
+    padding: 50px;
+    background-color: #c0fff4;
     justify-content: center; 
     align-items: center;
-    gap: 10px;
-    padding: 20px;
-    background-color: #c0fff4;
 }
 
-
-/*
-
-
-.encabezado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-direction: column;
-    background-color: #c0fff4;
-    color: black;
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
     padding: 20px;
-}
-
-.centered-container {
-    display: flex;
-    flex-direction: column;
+    margin-top: 20px; 
     justify-content: center; 
     align-items: center;
-    gap: 10px;
-    padding: 20px;
-    background-color: #c0fff4;
 }
 
-.cat-coffee {
-    background: #fff;
+
+.card{ 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
     padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #ffc0cb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card, img{
+    width: 80%;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+}
+
+.card h3 {
+    margin: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card p {
+    margin: 20px;
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+}
+
+.precio {
+    align-self: flex-start;
+    width: 100%; 
+    margin: 0; 
+    font-weight: bold; 
+}
+.carrito-icono {
+    position: fixed;
+    top: 15px;
+    right: 30px;
+    z-index: 1001;
+}
+
+.carrito-icono img {
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    
+}
+
+.card-img-top {
     width: 100%;
-    margin: 5px;
+    height: auto;
+}
+.btnSeleccionar {
+    background-color: white; 
+    color: black; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer; 
+    top: 20px;
+    left: 20px;
+    width: 50%;
+   
 }
 
-.card {
-    padding: 20px;
-    border: none;
-}
-
-
-.btn-outline-primary {
-    margin-top: 10px;
-}
-
-
-.hidden-form {
-    display: none;
-}
-
-
-.card.active .hidden-form {
-    display: block;
-}
-
-
-form {
+.btn-danger {
+    background-color: white; 
+    color: black; 
+    border: none; 
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px; 
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer; 
     margin-top: 20px;
 }
 
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-
-.form-control {
+.terminar-compra {
+    background-color: white; 
+    color: black; 
+    border: none; 
     width: 100%;
-    padding: 8px;
-    font-size: 16px;
+    text-align: center;
+    padding: 10px 20px 10px  10px; 
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer; 
+    margin-top: 20px;
+
+}
+.btnSeleccionar:hover {
+    background-color: #408080; 
+    color: white;
+
+}
+
+.btnSeleccionar:focus {
+    outline: none;
+}
+
+.btnSeleccionar:active {
+    transform: scale(0.98);
+}
+
+.btn:hover {
+    background-color: #ca233f; 
+    color: white;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    transform: scale(0.98);
 }
 
 
-.form-control option {
-    font-size: 16px;
+.terminar-compra:hover {
+    background-color: #408080; 
+    color: white;
 }
 
-*/
+.terminar-compra:focus {
+    outline: none;
+}
+
+.terminar-comprabtnSeleccionar:active {
+    transform: scale(0.98);
+}
+
+#carrito {
+    display: none;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 300px; 
+    height: 100vh; 
+    background-color: #c0fff4; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); 
+    overflow-y: auto; 
+    z-index: 1000;
+    padding: 20px; 
+    
+}
+
+
+
+.carrito-contenedor-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px; 
+    
+}
+
+.total {
+    font-weight: bold;
+    font-size: 2em;
+    margin: 20px 0;
+    
+}
+
+
+.card-body {
+    padding: 10px;
+    width: 100%;
+}
+
 
