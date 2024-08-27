@@ -37,41 +37,6 @@ h1, h2 {
     color: #333;
     align-items: center;
 }
-
-.card{ 
-    display: flex;
-    padding: 20px;
-    border: none;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    gap: 10px;
-    background-color: #c0fff4;
-
-}
-
-.card, img{
-    width: 350px;
-
-
-}
-.carrito-icono {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
-}
-
-.carrito-icono img {
-    vertical-align: middle;
-    width: 30px;
-    height: 30px;
-    
-}
-
-
-
-
 .container {
     display: flex;
     flex-direction: column;
