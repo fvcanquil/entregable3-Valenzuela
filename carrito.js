@@ -73,9 +73,10 @@ function actualizarCarrito() {
         actualizarCarrito();
     });
 
-    contenedorCarrito.appendChild(listaCarrito);
+
     contenedorCarrito.appendChild(totalElemento);
     contenedorCarrito.appendChild(botonFinalizarCompra);
+    contenedorCarrito.appendChild(listaCarrito);
 }
 
 function confirmarEliminar(productId) {
