@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.navbar {
+    background-color: #ffc0cb;
+    padding: 10px 20px; 
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-brand:focus,
+.navbar-brand:active,
+.navbar-brand:visited {
+    color: inherit; 
+    outline: none;
+}
+
+
+.navbar-brand img {
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+}
+
+h1, h2 {
+    color: #333;
+    align-items: center;
+}
+
+.card{ 
+    display: flex;
+    padding: 20px;
+    border: none;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 10px;
+    background-color: #c0fff4;
+
+}
+
+.card, img{
+    width: 350px;
+
+
+}
+.carrito-icono {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.carrito-icono img {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    
+}
+
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #c0fff4;
+}
+
+
+/*
+
+
+.encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    background-color: #c0fff4;
+    color: black;
+    padding: 20px;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #c0fff4;
+}
+
+.cat-coffee {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 5px;
+}
+
+.card {
+    padding: 20px;
+    border: none;
+}
+
+
+.btn-outline-primary {
+    margin-top: 10px;
+}
+
+
+.hidden-form {
+    display: none;
+}
+
+
+.card.active .hidden-form {
+    display: block;
+}
+
+
+form {
+    margin-top: 20px;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+
+.form-control option {
+    font-size: 16px;
+}
+
+*/
+
