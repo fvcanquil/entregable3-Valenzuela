@@ -2,6 +2,8 @@ const contenedorCarrito = document.getElementById('carrito');
 const shoppingCartIcon = document.getElementById('shoppingCartIcon');
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
+document.addEventListener('DOMContentLoaded', actualizarCarrito);
+
 contenedorCarrito.style.display = 'none';
 
 shoppingCartIcon.addEventListener('click', () => {
